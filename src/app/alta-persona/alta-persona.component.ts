@@ -6,7 +6,7 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { Persona } from '../model/persona';
-import { PersonasService } from '../personas.service';
+import { PersonasService } from '../services/personas.service';
 import { Subscription } from 'rxjs';
 
 @Component({

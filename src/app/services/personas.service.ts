@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Persona } from './model/persona';
+import { Persona } from '../model/persona';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class PersonasService {
   plantel: Persona[];
   uri: string = 'https://citenik-nodocker.azurewebsites.net/api/clientes';
+  
   constructor(public http: HttpClient) {
     this.plantel = [];
   }

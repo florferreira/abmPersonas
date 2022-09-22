@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { PlanesComponent } from './planes/planes.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -15,6 +16,8 @@ import { PlanesComponent } from './planes/planes.component';
     AppComponent,
     AltaPersonaComponent,
     ListaPersonasComponent,
+    PlanesComponent,
+    LoginComponent,
     PlanesComponent
   ],
   imports: [

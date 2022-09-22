@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Persona } from '../model/persona';
-import { PersonasService } from '../personas.service';
+import { PersonasService } from '../services/personas.service';
 
 @Component({
   selector: 'app-lista-personas',
@@ -24,7 +24,7 @@ export class ListaPersonasComponent implements OnInit, OnDestroy {
           this.personaServe.plantel = result;
         },
         error: () => {
-          alert('error en la peticion');
+          alert('Error al obtener el listado de personas');
         },
       })
     );
