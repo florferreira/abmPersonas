@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PlanesService } from '../services/planes.service';
 import { Subscription } from 'rxjs';
+import { Plan } from '../model/plan';
 
 @Component({
   selector: 'app-planes',
@@ -36,6 +37,21 @@ export class PlanesComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subs.unsubscribe();
+  }
+
+  borrarPln(plan: Plan) {
+    if (confirm('esta seguro de borrar')) {
+      this.subs.add(
+        this.planesService.delete(plan.id).subscribe({
+          next: (result) => {
+            console.log(result);
+          },
+          error: (err) => {
+            console.log(err.status);
+          },
+        })
+      );
+    }
   }
 
 }
