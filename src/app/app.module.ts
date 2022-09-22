@@ -7,13 +7,15 @@ import { ListaPersonasComponent } from './lista-personas/lista-personas.componen
 import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { PlanesComponent } from './planes/planes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AltaPersonaComponent,
-    ListaPersonasComponent
+    ListaPersonasComponent,
+    PlanesComponent
   ],
   imports: [
     BrowserModule,
