@@ -2,26 +2,21 @@
     <br>
     <table class="table">
         <thead >
-          <tr>
+          <tr class="titulosTabla">
             <th scope="col">ID</th>
             <th scope="col">PLAN</th>
             <th scope="col">TNA</th>
-            <th scope="col">DURACION MINIMA</th>
+            <th scope="col">DURACION MINIMA CUOTAS</th>
           </tr>
         </thead>
         <tbody >
-         <!-- <tr *ngFor="let cliente of clientesList">
-            <th scope="row"> {{cliente.id}} </th>
-            <td> {{cliente.name}}</td>
-            <td>{{cliente.username}}</td>
-            <td>{{cliente.email}}</td>
-         </tr> -->
+         
 
          <tr *ngFor="let plan of planesService.planesList">
             <th scope="row"> {{plan.id}} </th>
-            <td> {{plan.nombre}}</td>
+            <td class="nombreCompleto"> {{plan.nombre}}</td>
             <td>{{plan.tna}}</td>
-            <td>{{plan.duracionMinimaCuotas}}</td>
+            <td>{{plan.duracionMinimaCuotas}} </td>
          </tr>
           
 
