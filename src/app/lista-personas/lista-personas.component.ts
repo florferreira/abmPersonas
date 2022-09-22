@@ -34,7 +34,7 @@ export class ListaPersonasComponent implements OnInit, OnDestroy {
   }
 
   borrarPersona(persona: Persona) {
-    if (confirm('esta seguro de borrar')) {
+    if (confirm('esta seguro de borrar la persona')) {
       this.subs.add(
         this.personaServe.borrar(persona.id).subscribe({
           next: (result) => {

@@ -39,19 +39,27 @@ export class PlanesComponent implements OnInit, OnDestroy {
     this.subs.unsubscribe();
   }
 
-  borrarPln(plan: Plan) {
-    if (confirm('esta seguro de borrar')) {
-      this.subs.add(
-        this.planesService.delete(plan.id).subscribe({
-          next: (result) => {
-            console.log(result);
-          },
-          error: (err) => {
-            console.log(err.status);
-          },
-        })
-      );
-    }
+  borrarPlan(plan: Plan) {
+    // if (confirm('esta seguro de borrar plan')) {
+    //   this.subs.add(
+    //     this.planesService.delete(plan.id).subscribe({
+    //       next: (result) => {
+    //         console.log(result);
+    //       },
+    //       error: (err) => {
+    //         console.log(err.status);
+    //       },
+    //     })
+    //   );
+    // }
+    this.planesService.delete(plan.id).subscribe({
+      next: (result) => {
+        console.log(result);
+      },
+      error: (err) => {
+        console.log(err.status);
+      },
+    })
   }
 
 }
